@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f9fe"
+    android:orientation="vertical"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp" >
+
+    <LinearLayout style="@style/ActionBarCompat" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:clickable="false"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="15dip"
+            android:scaleType="center"
+            android:text="@string/app_name"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f8f9fe"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f8f9fe"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="0dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dip"
+                android:paddingLeft="0dip"
+                android:paddingRight="15dip"
+                android:paddingTop="15dip"
+                android:text="@string/add_water_user"
+                android:textColor="#ff29549f"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#808080" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#f8f9fe"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/first_name_Textview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:gravity="left"
+                    android:text="@string/first_name"
+                    android:textColor="#333333"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/fname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_top_bg"
+                    android:hint="@string/first_name"
+                    android:padding="10dp"
+                    android:textColorHint="#bbbbbb" />
+
+                <TextView
+                    android:id="@+id/last_name_TextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:gravity="left"
+                    android:hint="@string/last_name"
+                    android:text="@string/last_name"
+                    android:textColor="#333333"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/lname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_top_bg"
+                    android:ems="10"
+                    android:hint="@string/last_name"
+                    android:padding="10dp"
+                    android:textColorHint="#bbbbbb" />
+
+                <TextView
+                    android:id="@+id/pnumber_TextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:gravity="left"
+                    android:text="@string/pnumber"
+                    android:textColor="#333333"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/pnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_top_bg"
+                    android:ems="10"
+                    android:hint="@string/pnumber"
+                    android:inputType="phone"
+                    android:padding="10dp"
+                    android:textColorHint="#bbbbbb" />
+
+                <Button
+                    android:id="@+id/login_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/btn_submit"
+                    android:onClick="addUser"
+                    android:text="@string/add_user"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

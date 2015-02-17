@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f9fe"
+    android:orientation="vertical"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp" >
+
+    <LinearLayout style="@style/ActionBarCompat" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:clickable="false"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="15dip"
+            android:scaleType="center"
+            android:text="@string/app_name"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f8f9fe"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="0dp" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dip"
+            android:paddingLeft="0dip"
+            android:paddingRight="15dip"
+            android:paddingTop="15dip"
+            android:text="@string/add_motnhly_sale"
+            android:textColor="#ff29549f"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="#808080" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f8f9fe"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#f8f9fe"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/customer_name_Textview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:gravity="left"
+                    android:text="@string/water_user_name"
+                    android:textColor="#333333"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/wateruser_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_top_bg"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/water_user_name"
+                    android:padding="10dp"
+                    android:textColorHint="#bbbbbb" />
+
+                <TextView
+                    android:id="@+id/beneficiary_Textview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:gravity="left"
+                    android:hint="@string/amount_sold"
+                    android:text="@string/amount_sold"
+                    android:textColor="#333333"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/amount_sold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_top_bg"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/amount_sold"
+                    android:inputType="number|numberSigned|numberDecimal"
+                    android:padding="10dp"
+                    android:textColorHint="#bbbbbb" />
+
+                <TextView
+                    android:id="@+id/select_pump_TextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:gravity="left"
+                    android:text="@string/water_source_prompt"
+                    android:textColor="#333333"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/water_source_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/water_sources_array"
+                    android:prompt="@string/water_source_prompt" />
+
+                <TextView
+                    android:id="@+id/select_date_TextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:gravity="left"
+                    android:text="@string/select_a_date"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/sale_datePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_top_bg"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:padding="10dp"
+                    android:textColorHint="#bbbbbb"
+                    android:visibility="gone" />
+
+                <!--
+                     DatePicker
+                    android:id="@+id/sale_datePicker"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:gravity="left"
+                    android:visibility="gone" /
+                -->
+
+                <Button
+                    android:id="@+id/send_message_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/btn_submit"
+                    android:onClick="addSale"
+                    android:text="@string/add_motnhly_sale"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

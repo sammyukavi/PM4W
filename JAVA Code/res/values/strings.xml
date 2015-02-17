@@ -1,0 +1,118 @@
+<resources>
+
+    <string name="app_name">PM4W</string>
+    <string name="logout">Logout</string>
+    <string name="help">Help</string>
+    <string name="about">About</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="pnumber">Phone number</string>
+    <string name="add_user">Add User</string>
+    <string name="select_a_date">Choose the Month, Date and Year to clear</string>
+    <string name="date">Date</string>
+    <string name="amount">Amount</string>
+    <string name="load_more">load_more</string>
+    <string name="name">Name</string>
+    <string name="water_user_id">User ID</string>
+    <string name="save">Save</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="login">Login</string>
+    <string name="enter_login">Enter username</string>
+    <string name="enter_password">Enter your password</string>
+    <string name="forgot_passowrd">[?]</string>
+    <string name="recover_password">Recover Password</string>
+    <string name="recover">Recover</string>
+    <string name="server_unregistered">Server unregistered</string>
+    <string name="gcm_unregistered">GCM Unregistred</string>
+    <string name="gcm_deleted">GCM Deleted</string>
+    <string name="gcm_error">GCM Error</string>
+    <string name="gcm_recoverable_error">GCM Recoverable Error</string>
+
+    <string-array name="user_account_menu">
+        <item>Edit</item>
+        <item>Delete</item>
+    </string-array>
+    <string-array name="follow_up_menu">
+        <item>Send SMS</item>
+        <item>Report</item>
+    </string-array>
+    <string-array name="transactions_menu">
+        <item>Submit</item>
+        <item>Cancel</item>
+    </string-array>
+
+    <!-- strings regarding water users here -->
+    <string name="water_users">Water Users</string>
+    <string name="list_water_users">List Water Users</string>
+    <string name="add_water_users">Add Water Users</string>
+    <string name="add_water_user">Add Water User</string>
+    <string name="edit_water_user">Edit Water User</string>
+    <string name="water_user_name">Water User\'s name</string>
+    <string name="monthly_water_users">Monthly Billed Users</string>
+
+    <!-- strings regarding sales here -->
+    <string name="sales">Sales</string>
+    <string name="all_sales">All Sales</string>
+    <string name="daily_sale">Daily Sale</string>
+    <string name="monthly_billing">Monthly Sales</string>
+    <string name="follow_up">Follow Up</string>
+    <string name="add_daily_sale">Add Daily Sale</string>
+    <string name="add_motnhly_sale">Add Monthly Sale</string>
+    <string name="amount_sold">Amount Sold (UGX)</string>
+    <string name="water_source_prompt">Choose Water Source</string>
+    <string name="users_with_unpaid_dues">Users with Debt</string>
+
+    <!-- strings regarding savings here -->
+    <string name="savings">Savings</string>
+    <string name="commitee_treasurer">Committee Treasurer</string>
+    <string name="waterboard_treasurer">Water Board Treasurer</string>
+    <string name="district_water_officer">District Water Officer</string>
+    <string name="water_source_savings">Water Source Savings</string>
+    <string name="savings_pending_submissions">Submit Sales</string>
+
+    <!-- strings regarding water sources here -->
+    <string name="water_sources">Water Sources</string>
+    <string name="water_source_data">Water Source Data</string>
+
+    <string-array name="water_sources_array"></string-array>
+
+    <string name="water_source_name">Water Source Name</string>
+    <string name="water_source_location">Water Source Location</string>
+
+    <!-- strings regarding expenditures here -->
+    <string name="expenditures">Expenses</string>
+    <string name="repair_type">Expenditure Type</string>
+    <string name="expenditure_cost">Expenditure cost</string>
+    <string name="benefactor">Person paid</string>
+    <string name="description">Describe your expenditure</string>
+    <string name="save_expenditure">Save expenditure</string>
+
+    <string-array name="repairtypes_array"></string-array>
+
+    <string name="repairtype_prompt">Choose Repair Type</string>
+
+    <!-- strings regarding system users here -->
+    <string name="system_users">Users</string>
+
+    <!-- strings regarding user account here -->
+    <string name="account">Account</string>
+    <string name="my_account_balance">My Balance</string>
+    <string name="balance">Balance</string>
+    <string name="account_name">Account name</string>
+    <string name="available_balance">Available Balance</string>
+    <string name="mini_statement">Mini Statement</string>
+    <string name="transaction">Transaction</string>
+    <string name="verified_transactions">Verified Transactions</string>
+    <string name="cost">Cost</string>
+    <string name="type_of_expense">Type of expense</string>
+    <string name="save_expense">Save expense</string>
+    <string name="add_expense">Add expense</string>
+    <string name="expense_cost">Expense Cost</string>
+    <string name="beneficiary">Beneficiary</string>
+    <string name="compose_sms">Compose SMS</string>
+    <string name="type_the_message">Type the message</string>
+    <string name="send_sms_message">Send Message</string>
+    <string name="senders_name">Your name</string>
+    <string name="recepients_name">To</string>
+
+</resources>

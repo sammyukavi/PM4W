@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/ActionBarCompat" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:clickable="false"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="15dip"
+            android:scaleType="center"
+            android:text="@string/app_name"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dip"
+            android:text="@string/mini_statement"
+            android:textColor="#ff29549f"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="#808080" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/titles_table"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/header_table_row"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="5dip" >
+
+            <TextView
+                android:id="@+id/transaction_name_textView"
+                android:layout_gravity="left"
+                android:layout_weight=".30"
+                android:padding="5dip"
+                android:text="@string/transaction"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/cost_textView"
+                android:layout_gravity="left"
+                android:layout_weight=".30"
+                android:padding="5dip"
+                android:text="@string/cost"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/date_textView"
+                android:layout_gravity="left"
+                android:layout_weight=".30"
+                android:padding="5dip"
+                android:text="@string/date"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000" />
+        </TableRow>
+    </TableLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none" >
+
+        <TableLayout
+            android:id="@+id/mini_statement_table"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>
