@@ -1,21 +1,20 @@
 <?php
 
-define('SITE_URL', 'http://yoursite/manage'); //No forward slash
+define('SITE_URL', 'http://pm4w.uct.ac.za/manage'); //No forward slash
 
 
-//define('DB_HOST', '127.0.0.1');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_NAME', 'pm4w_app');
+/* * * HIGHLY REQUIRED COMMENT THOSE BELOW WHEN PROPERLY EDITED** */
+define("DB_HOST", 'localhost');
+define("DB_USERNAME", 'pm4w');
+define("DB_PASSWORD", 'ni9ieGoe');
+define("DB_NAME", "pm4w");
 
-
-
-define("DEFAULT_SITE_EMAIL", "adminemail@email.com");
+define("DEFAULT_SITE_EMAIL", "sammyukavi@gmail.com");
 
 define('TABLE_PREFIX', '');
 date_default_timezone_set("Africa/Kampala");
-ini_set('display_errors', 0);
-ini_set('max_execution_time', 600); //10 minutes
+ini_set('display_errors', 1);
+ini_set('max_execution_time', 0); //10 minutes
 ob_start('ob_gzhandler');
 session_cache_limiter('none');
 session_start();

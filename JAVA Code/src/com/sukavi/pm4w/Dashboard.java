@@ -40,6 +40,7 @@ public class Dashboard extends Activity {
     ProgressDialog pDialog;
     public JSONObject json;
     int count=0;
+    public static boolean isDownloadingUpdate = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -179,21 +180,37 @@ public class Dashboard extends Activity {
 	    Intent login = new Intent(getApplicationContext(), Login.class);
 	    startActivity(login);
 	    this.finish();
-	}/*else if(item.getItemId()==R.id.action_help){	    
+	}else if(item.getItemId()==R.id.action_help){	    
 	    Intent help = new Intent(getApplicationContext(), Help.class);
 	    startActivity(help);	   
-	}*/else if(item.getItemId()==R.id.action_about){	    
+	}else if(item.getItemId()==R.id.action_about){	    
 	    Intent about = new Intent(getApplicationContext(), About.class);
 	    startActivity(about);	   
+	}else if(item.getItemId()==R.id.action_check_update){	    
+	    Intent aCheckForUpdates = new Intent(getApplicationContext(), CheckForUpdates.class);
+	    startActivity(aCheckForUpdates);	   
 	}
 	return false;
     }	
 
     @Override
     public void onBackPressed() {
-	// TODO Auto-generated method stub
 	//	super.onBackPressed();
-	android.os.Process.killProcess(android.os.Process.myPid());
+	//android.os.Process.killProcess(android.os.Process.myPid());
+	if(isDownloadingUpdate) {
+	    new AlertDialog.Builder(Dashboard.this)
+	    .setTitle(Config.INFO)
+	    .setMessage(Config.CANCEL_DISABLED_DOWNLOADING_UPDATE)	    
+	    .setIcon(android.R.drawable.ic_dialog_alert).setOnCancelListener(new OnCancelListener() {
+
+		@Override
+		public void onCancel(DialogInterface dialog) {
+		    return;							
+		}
+	    }).show();
+	}else {
+	    android.os.Process.killProcess(android.os.Process.myPid());
+	}
     }
 
     @Override
@@ -226,14 +243,14 @@ public class Dashboard extends Activity {
 
 			@Override
 			public void onCancel(DialogInterface dialog) {
-			    finish();								
+			    //finish();								
 			}
-		    }).setPositiveButton("Update", new DialogInterface.OnClickListener() {
+		    }).setPositiveButton(Config.UPDATE, new DialogInterface.OnClickListener() {
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 			    Intent intent = new Intent(Intent.ACTION_VIEW);
-			    intent.setDataAndType(Uri.fromFile(new File(Environment.getExternalStorageDirectory() + "/pm4w/" + name)), "application/vnd.android.package-archive");
+			    intent.setDataAndType(Uri.fromFile(new File(Environment.getExternalStorageDirectory() + "/"+Config.STORAGE_DRIECTORY_NAME+"/" + name)), "application/vnd.android.package-archive");
 			    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 			    startActivity(intent);
 			}

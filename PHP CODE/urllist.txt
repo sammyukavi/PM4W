@@ -1,4 +1,4 @@
-http://pm4w.eyeeza.com/
-http://pm4w.eyeeza.com/downloads/
-http://pm4w.eyeeza.com/manage/
-http://pm4w.eyeeza.com/manage/?a=forgot-password
+http://pm4w.uct.ac.za/
+http://pm4w.uct.ac.za/downloads/
+http://pm4w.uct.ac.za/manage/
+http://pm4w.uct.ac.za/manage/?a=forgot-password

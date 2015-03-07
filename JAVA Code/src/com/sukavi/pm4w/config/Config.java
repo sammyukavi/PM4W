@@ -4,10 +4,14 @@ public class Config {
 
     public static String APP_VERSION;
 
-    public static final String API_URL = "http://yoursite/api/";//with forward slash
-  
+    public static final String API_URL = "http://pm4w.uct.ac.za/api/";//with forward slash
+
+    //public static final String API_URL = "http://192.168.57.1/api/";//with forward slash 
+
     // Google project id
     public static final String GOOGLE_PROJECT_ID = "901753417814"; 
+
+    public static final String STORAGE_DRIECTORY_NAME = "pm4w";
 
 
     public static final String DISPLAY_MESSAGE_ACTION =  "com.sukavi.pm4w.DISPLAY_MESSAGE";
@@ -46,6 +50,7 @@ public class Config {
     public static String SELECT_ACTION = "Select action";
     public static String FINISH = "Finish";
     public static String ANOTHER_SALE = "Another Sale";
+    public static String UPDATE="Update";
 
 
     public static String USERNAME_REQUIRED = "Please enter your username, email address or phone number";
@@ -94,6 +99,14 @@ public class Config {
     public static String ACTION_DISABLED ="You do not have the required rights to perform this action. If you feel this is an error, please consult your administrator for further advice.";
 
     public static final String UPDATE_AVAILABLE = "An update of PM4W app is available. It is mandatory that you install the update. Please select install then sletect open on the next screen to complete the process.";
-
+    public static final String UPDATE_AVAILABLE_INSUFFICIENT_SPACE = "An update of this app is available for download but you require free space in your memory card to update";
+    public static final String UPDATE_AVAILABLE_NO_MEMORY_CARD = "An update of this app is available for download but you require a memory card to update this app";
+    public static final String UPDATE_ERROR = "Update error! ";
+    public static final String CANCEL_DISABLED_DOWNLOADING_UPDATE = "Downloading an update. This wont take long. Please wait. ";
+    public static final String NO_UPDATE_AVAILABLE = "No update is available. You have the latest version installed.";
+    public static final String DOWNLOADING_UPDATE= "Downloading update.";
+    public static final String CONFIRM_CANCEL_DOWNLOAD= "Are you sure you want to cancel this download? Resume is not supported and all progress will be discarded. You will have to start the download again.";
+    public static final String CANCEL_DOWNLOAD="Cancel Download";
+    public static final String FINISH_DOWNLOADING="Download";
 
 }

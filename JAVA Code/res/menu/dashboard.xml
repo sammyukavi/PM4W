@@ -4,13 +4,17 @@
         android:id="@+id/action_logout"
         android:icon="@drawable/menu_logout"
         android:title="@string/logout"/>
-    <!-- item
-        android:id="@+id/action_help"
-        android:icon="@drawable/menu_help"
-        android:title="@string/help"/-->
+    <item
+        android:id="@+id/action_check_update"
+        android:icon="@drawable/menu_check_update"
+        android:title="@string/check_for_updates"/>
     <item
         android:id="@+id/action_about"
         android:icon="@drawable/menu_about"
         android:title="@string/about"/>
+    <item
+        android:id="@+id/action_help"
+        android:icon="@drawable/menu_help"
+        android:title="@string/help"/>
 
 </menu>

@@ -4,6 +4,8 @@
     <string name="logout">Logout</string>
     <string name="help">Help</string>
     <string name="about">About</string>
+    <string name="check_for_updates">Check for updates</string>
+    <string name="current_version">Current version</string>
     <string name="first_name">First name</string>
     <string name="last_name">Last name</string>
     <string name="pnumber">Phone number</string>

@@ -11,8 +11,10 @@ if ((strtotime("$acountablility_cycle day", strtotime($last_day_acountability_sm
     $funds_accountability_sms_template = getArrayVal($SYSTEM_CONFIG, 'funds_accountability_sms_template');
     $query = "SELECT * FROM water_sources";
     $result = $dbhandle->RunQueryForResults($query);
-    while ($row = $result->fetch_assoc()) {
-        $water_sources[] = $row;
+    if ($result) {
+        while ($row = $result->fetch_assoc()) {
+            $water_sources[] = $row;
+        }
     }
 
     foreach ($water_sources as $water_source) {

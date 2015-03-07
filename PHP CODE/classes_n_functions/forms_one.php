@@ -8,8 +8,8 @@ function the_login_form() {
                 <h3 class="row-title">Login</h3>
                 <div class="row">
                     <div class="col-md-12">
-                        <label class="control-label" for="email">Email</label>
-                        <input type="text" name="email" id="email" class="form-control" placeholder="email,username or phone number">
+                        <label class="control-label" for="email">Username</label>
+                        <input type="text" name="email" id="email" class="form-control" placeholder="username">
                     </div>
                 </div>
                 <div class="row">
@@ -43,8 +43,8 @@ function the_recovery_form() {
                 <h3 class="row-title">Recover password</h3>
                 <div class="row">
                     <div class="col-md-12">
-                        <label class="control-label" for="email">Enter email, username or phone number <br/>(format 256777123456)</label>
-                        <input type="text" name="email" id="email" class="form-control" placeholder="email,username or phone number">
+                        <label class="control-label" for="email">Enter username</label>
+                        <input type="text" name="email" id="email" class="form-control" placeholder="username">
                     </div>
                 </div>                
                 <div class="row">

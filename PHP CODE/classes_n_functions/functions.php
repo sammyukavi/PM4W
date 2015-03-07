@@ -306,7 +306,7 @@ function generateAlphaNumCode($length = 4) {
     return $code;
 }
 
-function send_sms_message($semi_collon_separated_recepients, $message) {
+function send_sms_message($comma_separated_recepients, $message) {
     //return true;
     if (ENABLE_SMS !== 1) {
         return true;
@@ -319,6 +319,8 @@ function send_sms_message($semi_collon_separated_recepients, $message) {
     if (!defined("SMS_API_KEY") || strlen(SMS_API_KEY) <= 0) {
         return true;
     }
+    
+    //pm4w-1.102
 
     global $TEMPLATE_PARAMS;
 
@@ -329,18 +331,47 @@ function send_sms_message($semi_collon_separated_recepients, $message) {
     $message = preg_replace_callback('/{\$([a-zA-Z0-9_]+)}/', function($matches) use($TEMPLATE_PARAMS) {
         return (isset($TEMPLATE_PARAMS[$matches[1]]) ? $TEMPLATE_PARAMS[$matches[1]] : "");
     }, $message);
-
-
-    $smsObject = new AfricasTalkingGateway(SMS_API_USERNAME, SMS_API_KEY);
-    $recepients_array = explode(';', $semi_collon_separated_recepients);
-    foreach ($recepients_array as $single_recepient) {
+      
+    if (function_exists('curl_version')) {
+        $smsObject = new AfricasTalkingGateway(SMS_API_USERNAME, SMS_API_KEY);
         try {
-            $smsObject->sendMessage($single_recepient, $message);
+            $smsObject->sendMessage($comma_separated_recepients, $message);
         } catch (AfricasTalkingGatewayException $e) {
             send_email(DEFAULT_SITE_EMAIL, "Encountered an error while sending SMS", $e->getMessage());
             //echo "Encountered an error while sending: " . $e->getMessage();            
             return false;
         }
+    } else {
+        $url = 'http://api.africastalking.com/version1/messaging';
+        $data = array('username' => SMS_API_USERNAME, 'message' => $message, 'to' => $comma_separated_recepients);
+
+        // use key 'http' even if you send the request to https://...
+        $options = array(
+            'http' => array(
+                'header' => "Content-type: application/x-www-form-urlencoded\r\n"
+                . "Accept: application/json\r\n"
+                . "apikey: " . SMS_API_KEY,
+                'method' => 'POST',
+                'content' => http_build_query($data),
+            ),
+        );
+        $context = stream_context_create($options);
+
+        set_error_handler(
+                create_function(
+                        '$severity, $message, $file, $line', 'throw new ErrorException($message, $severity, $severity, $file, $line);'
+                )
+        );
+
+        try {
+            $result = file_get_contents($url, false, $context);
+        } catch (Exception $e) {
+            send_email(DEFAULT_SITE_EMAIL, "Encountered an error while sending SMS", $e->getMessage());
+            //echo "Encountered an error while sending: " . $e->getMessage();            
+            return false;
+        }
+        restore_error_handler();
+        return true;
     }
     return true;
 }
@@ -528,10 +559,6 @@ function calculateTotalSavingsFromWaterSource($src_id) {
     return $total_savings - $total_expenses;
 }
 
-
-
-
-
 function the_full_size_map() {
 //var_dump($_SESSION);
     ?>
@@ -627,7 +654,7 @@ function the_dashboard() {
                 <div class="panel-body">
                     <div class="row">               
                         <div class="col-md-12">
-                            <h4>Acoount Name: <?php echo $USER->fname . " " . $USER->lname; ?></h4>
+                            <h4>Account Name: <?php echo $USER->fname . " " . $USER->lname; ?></h4>
                             <h4>User Role: <?php echo $USER->group_name; ?></h4>
                             <?php if (!empty($water_source_names)) { ?>
                                 <h4>Water Source: <?php echo implode(', ', $water_source_names); ?></h4>

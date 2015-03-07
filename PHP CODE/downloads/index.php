@@ -89,20 +89,21 @@
         }
 
         arsort($files);
-
-        //var_dump($files);
+        //var_dump($files);        
         ?>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">                    
                     <ul>
                         <?php
+                        $counter = 0;
                         foreach ($files as $key => $file) {
-                            if ($key == (count($files)) - 1) {
+                            if ($counter === 0) {
                                 echo '<li class="list-group-item"><span class="badge badge-success">Latest</span><strong><a href="' . $file[0] . '">' . $file[0] . '</a></strong> <small> created: ' . getCurrentDate($file[1], true) . '</small></li>';
                             } else {
                                 echo '<li class="list-group-item"><a href="' . $file[0] . '">' . $file[0] . '</a> <small>created: ' . getCurrentDate($file[1], true) . '</small></li>';
                             }
+                            $counter+=1;
                         }
                         ?>
                     </ul>
@@ -119,5 +120,24 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-60032029-1', 'auto');
+            ga('send', 'pageview');
+
+
+        </script>
     </body>
 </html>

@@ -1,1 +1,42 @@
+#php_value upload_max_filesize 2047M
+#php_value post_max_size 2047M
+
+#the line below will hide folders and their contents on any apache server. Use 'Options +Indexes' to unhide
 Options -Indexes
+
+#the line below will hide folders and their contents on goDaddy. Use 'Options +MultiViews' to unhide
+#Options +MultiViews
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# Force WWW prefix
+RewriteCond %{HTTP_HOST} !^$
+RewriteCond %{HTTP_HOST} ^([^.]+)\.([a-z]{2,4})$ [NC]
+RewriteCond %{HTTPS}s ^on(s)|
+RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+
+# Remove .php extension
+RewriteCond %{THE_REQUEST} ^GET\ /[^?\s]+\.php
+RewriteRule (.*)\.php$ /$1/ [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} ^/(.+)/$
+RewriteCond %{DOCUMENT_ROOT}/%1.php -f
+RewriteRule ^(.*)/$ $1.php [L]
+
+
+# Force trailing slash
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule .*[^/]$ $0/ [L,R=301]
+
+#the lines below relocate all 404 to the index page
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>

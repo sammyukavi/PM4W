@@ -488,7 +488,7 @@ switch ($action) {
             $data['msgs'] = array('Login is required. Please close the application then start it again.');
         } else {
 
-            $water_user = array();          
+            $water_user = array();
 
             $id_user = getArrayVal($_POST, 'id_user');
             $msg_content = trim(getArrayVal($_POST, 'msg_content'));
@@ -934,29 +934,37 @@ switch ($action) {
                 );
             }
         }
-        
+
         arsort($files);
+
+        //var_dump($files);
+
         if (!empty($files)) {
-            $file = $files[(count($files) - 1)];           
-            $updates = array(
-                array('version' => floatval($file[2]),
-                    'url' => 'http://' . getArrayVal($_SERVER, 'SERVER_NAME') . "/downloads/" . $file[0],
-                    'name' => $file[0], //always change the value, app does not overwrite
-                    'size' => filesize(SITE_PATH . "/downloads/" . $file[0])
-                ),
-            );
+            $counter = 0;
+            foreach ($files as $key => $file) {
+                if ($counter === 0) {
+                    $updates = array(
+                        array('version' => floatval($file[2]),
+                            'url' => 'http://' . getArrayVal($_SERVER, 'SERVER_NAME') . "/downloads/" . $file[0],
+                            'name' => $file[0], //always change the value, app does not overwrite instead deletes
+                            'size' => filesize(SITE_PATH . "/downloads/" . $file[0])
+                        ),
+                    );
+                }
+                $counter+=1;
+            }
         } else {
             $updates = array(
                 array('version' => 0.0,
                     'url' => '',
-                    'name' => '', //always change the value, app does not overwrite
+                    'name' => '', //always change the value, app does not overwrite instead deletes
                     'size' => 0
                 ),
             );
         }
         $data['updates'] = $updates;
         $request_status = 1;
-        $data['msgs'] = array('Successful');       
+        $data['msgs'] = array('Successful');
         break;
     default:
         $data['msgs'] = array("Undefined request '" . $action . "'");

@@ -73,24 +73,27 @@ public class DownloadService extends IntentService{
 				StatFs stats = new StatFs(extdir.getAbsolutePath());
 				int availableBytes = stats.getAvailableBlocks() * stats.getBlockSize();
 				if(availableBytes<latest_update.getInt("size")) {
-				    Toast.makeText(getApplicationContext(), "An update od this app is available for download but you require free space in your memory card to update.", Toast.LENGTH_LONG).show();
+				    Toast.makeText(getApplicationContext(), Config.UPDATE_AVAILABLE_INSUFFICIENT_SPACE, Toast.LENGTH_LONG).show();
 				}else {
 				    try {
+
+					Dashboard.isDownloadingUpdate = true;
+
 					URL url = new URL(latest_update.getString("url"));
 					name = latest_update.getString("name");
-					String PATH = Environment.getExternalStorageDirectory() + "/pm4w/";
-					
+					String PATH = Environment.getExternalStorageDirectory() + "/"+Config.STORAGE_DRIECTORY_NAME+"/";
+
 					File chk = new File(PATH+name);
 					if(chk.exists()) {
 					    chk.delete();  
 					}
-					
+
 					HttpURLConnection c = (HttpURLConnection) url.openConnection();
 					c.setRequestMethod("GET");
 					c.setDoOutput(true);
 					c.connect();
 
-					
+
 					File file = new File(PATH);
 					file.mkdirs();
 					File outputFile = new File(file, name);
@@ -104,29 +107,42 @@ public class DownloadService extends IntentService{
 					    fos.write(buffer, 0, len1);
 					}
 					fos.close();
-					is.close();
+					is.close();					
+
+					//delete other updates and leave only one; the latest										
+
+					File pm4w_directory = new File(PATH);        
+					String[] myFiles;      
+
+					myFiles = pm4w_directory.list();  
+					for (int i=0; i<myFiles.length; i++) {  
+					    File myFile = new File(pm4w_directory, myFiles[i]);   
+					    if(!myFile.getName().equals(name)) {
+						myFile.delete(); 
+					    }					   
+					}					
 					resultCode =  android.app.Activity.RESULT_OK;
-
-
 				    } catch (IOException e) {
-					Toast.makeText(getApplicationContext(), "Update error! "+e.toString(), Toast.LENGTH_LONG).show();
+					Dashboard.isDownloadingUpdate=false;
+					//Toast.makeText(getApplicationContext(), Config.UPDATE_ERROR+e.toString(), Toast.LENGTH_LONG).show();
 				    }
 				}
 
 			    }else {
-				Toast.makeText(getApplicationContext(), "An update od this app is available for download but you require a memory card to update this app", Toast.LENGTH_LONG).show();
+				Dashboard.isDownloadingUpdate=false;
+				Toast.makeText(getApplicationContext(), Config.UPDATE_AVAILABLE_NO_MEMORY_CARD, Toast.LENGTH_LONG).show();
 			    }
-
-
 			}
 		    }
 		}
 	    }
 	} catch (JSONException e) {
-	   e.printStackTrace();
+	    Dashboard.isDownloadingUpdate=false;
+	    e.printStackTrace();
 	}
 
 
+	Dashboard.isDownloadingUpdate=false;
 
 	publishResults(resultCode,name);
 

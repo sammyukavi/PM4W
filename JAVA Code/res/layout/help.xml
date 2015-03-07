@@ -51,13 +51,17 @@
             android:layout_height="1dip"
             android:background="#808080" />
 
-        <com.sukavi.pm4w.customlayouts.DashboardLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:paddingTop="15dp" >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
 
-           
-        </com.sukavi.pm4w.customlayouts.DashboardLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:text="@string/help_description"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </ScrollView>
     </LinearLayout>
 
 </LinearLayout>
