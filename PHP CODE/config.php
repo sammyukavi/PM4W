@@ -5,11 +5,11 @@ define('SITE_URL', 'http://pm4w.uct.ac.za/manage'); //No forward slash
 
 /* * * HIGHLY REQUIRED COMMENT THOSE BELOW WHEN PROPERLY EDITED** */
 define("DB_HOST", 'localhost');
-define("DB_USERNAME", 'pm4w');
-define("DB_PASSWORD", 'ni9ieGoe');
-define("DB_NAME", "pm4w");
+define("DB_USERNAME", '');
+define("DB_PASSWORD", '');
+define("DB_NAME", "");
 
-define("DEFAULT_SITE_EMAIL", "sammyukavi@gmail.com");
+define("DEFAULT_SITE_EMAIL", "");
 
 define('TABLE_PREFIX', '');
 date_default_timezone_set("Africa/Kampala");
