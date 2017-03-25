@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f8f9fe">
+
+    <LinearLayout
+        android:id="@+id/action_bar"
+        style="@style/ActionBarCompat">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:clickable="false"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="15dip"
+            android:scaleType="center"
+            android:text="@string/app_name"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/title_bar"
+        style="@style/title_bar"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="0dp">
+
+        <TextView
+            android:id="@+id/formName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom"
+            android:paddingBottom="5dip"
+            android:paddingLeft="0dip"
+            android:paddingRight="15dip"
+            android:paddingTop="15dip"
+            android:text="@string/approve_treasurer_collections"
+            android:textColor="#ff29549f"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/usersCount"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:background="@drawable/border_bottom"
+            android:gravity="right"
+            android:paddingBottom="5dip"
+            android:paddingLeft="0dip"
+            android:paddingRight="15dip"
+            android:paddingTop="15dip"
+            android:text="0"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/LinearLayout02"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:weightSum="1.0">
+
+            <Button
+                android:id="@+id/approve_sales_button"
+                android:layout_width="0dip"
+                android:layout_height="50dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.5"
+                android:background="#ff29549f"
+                android:onClick="approveSubmitted"
+                android:text="@string/approve_sales"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/cancel_sales_button"
+                android:layout_width="0dip"
+                android:layout_height="50dp"
+                android:layout_weight="0.5"
+                android:background="#ff29549f"
+                android:onClick="denySubmitted"
+                android:text="@string/cancel_sales"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        android:paddingBottom="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="0dp">
+
+        <ListView
+            android:id="@+id/waterUsersList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:cacheColorHint="#0000"
+            android:choiceMode="singleChoice"
+            android:drawSelectorOnTop="false"></ListView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

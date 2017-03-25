@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout02"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="0dp"
+    android:padding="0dp"
+    android:weightSum="1.0">
+
+    <TextView
+        android:id="@+id/transactionTypeRender"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_weight="0.333"
+        android:text="@string/type_of_expense"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_weight="0.333"
+        android:text="@string/amount"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_weight="0.333"
+        android:text="@string/date"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+</LinearLayout>

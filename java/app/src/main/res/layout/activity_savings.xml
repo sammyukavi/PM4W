@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:background="#f8f9fe"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/ActionBarCompat">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:clickable="false"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="15dip"
+            android:scaleType="center"
+            android:text="@string/app_name"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="0dp">
+
+        <TextView
+            android:id="@+id/formName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dip"
+            android:paddingLeft="0dip"
+            android:paddingRight="15dip"
+            android:paddingTop="15dip"
+            android:text="@string/submit_savings"
+            android:textColor="#ff29549f"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#808080" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_commitee_treasurer"
+                style="@style/DashboardButton"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/btn_commitee_treasurer"
+                android:text="@string/commitee_treasurer"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_waterboard_treasurer"
+                style="@style/DashboardButton"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/btn_waterboard_treasurer"
+                android:text="@string/waterboard_treasurer"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_watersource_savings"
+                style="@style/DashboardButton"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/btn_watersource_savings"
+                android:text="@string/water_source_savings"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_transparent"
+                style="@style/DashboardButton"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/btn_transparent" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

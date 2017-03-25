@@ -1,0 +1,124 @@
+<resources>
+
+    <string name="app_name" translatable="false">PM4W</string>
+
+    <string name="logout" translatable="false">Logout</string>
+    <string name="help" translatable="false">Help</string>
+    <string name="about" translatable="false">About</string>
+    <string name="check_for_updates" translatable="false">Check for updates</string>
+    <string name="current_version" translatable="false">Current version</string>
+    <string name="first_name" translatable="false">First name</string>
+    <string name="last_name" translatable="false">Last name</string>
+    <string name="pnumber" translatable="false">Phone number</string>
+    <string name="add_user" translatable="false">Add User</string>
+    <string name="select_a_date" translatable="false">Choose the Month, Date and Year to clear</string>
+    <string name="date" translatable="false">Date</string>
+    <string name="amount" translatable="false">Amount</string>
+    <string name="load_more" translatable="false">load_more</string>
+    <string name="name" translatable="false">Name</string>
+    <string name="water_user_id" translatable="false">User ID</string>
+    <string name="save" translatable="false">Save</string>
+    <string name="dashboard" translatable="false">Dashboard</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="enter_login" translatable="false">Enter username</string>
+    <string name="enter_password" translatable="false">Enter password</string>
+    <string name="forgot_passowrd" translatable="false">[?]</string>
+    <string name="recover_password" translatable="false">Recover Password | Tunga pasiwadi yawe</string>
+    <string name="recover" translatable="false">Recover</string>
+    <string name="send_data" translatable="false">Send data</string>
+
+    <!-- strings regarding water users here -->
+    <string name="water_users" translatable="false">Water Users</string>
+    <string name="list_water_users" translatable="false">List Water Users</string>
+    <string name="add_water_users" translatable="false">Add Water Users</string>
+    <string name="add_water_user" translatable="false">Add Water User</string>
+    <string name="edit_water_user" translatable="false">Edit Water User</string>
+    <string name="edit" translatable="false">Edit</string>
+    <string name="delete" translatable="false">Delete</string>
+    <string name="water_user_name" translatable="false">Water User\'s name</string>
+    <string name="monthly_water_users" translatable="false">Monthly Billed Users</string>
+
+    <!-- strings regarding sales here -->
+    <string name="sales" translatable="false">Sales</string>
+    <string name="all_sales" translatable="false">All Sales</string>
+    <string name="daily_sale" translatable="false">Daily Sale</string>
+    <string name="monthly_billing" translatable="false">Monthly Sales</string>
+    <string name="follow_up" translatable="false">Follow Up</string>
+    <string name="add_daily_sale" translatable="false">Add Daily Sale</string>
+    <string name="add_monthly_sale" translatable="false">Add Monthly Sale</string>
+    <string name="amount_sold" translatable="false">Amount Sold (UGX)</string>
+    <string name="water_source" translatable="false">Water Source</string>
+    <string name="water_source_prompt" translatable="false">Choose Water Source</string>
+    <string name="defaulters" translatable="false">Defaulters</string>
+
+    <!-- strings regarding savings here -->
+    <string name="submit_savings" translatable="false">Submit Savings</string>
+    <string name="commitee_treasurer" translatable="false">Committee\n Treasurer</string>
+    <string name="waterboard_treasurer" translatable="false">Water Board\n Treasurer</string>
+    <string name="district_water_officer" translatable="false">District Water Officer</string>
+    <string name="water_source_savings" translatable="false">Water Source\n Savings</string>
+    <string name="water_source_savings_2" translatable="false">Water Source Savings</string>
+    <string name="submit_caretaker_sales" translatable="false">Submit Caretaker Sales</string>
+    <string name="approve_treasurer_collections" translatable="false">Approve Treasurer Collections</string>
+    <string name="approve_sales" translatable="false">Approve Sales</string>
+    <string name="submit_sales" translatable="false">Submit Sales</string>
+    <string name="cancel_sales" translatable="false">Cancel Sales</string>
+    <string name="submit" translatable="false">Submit</string>
+
+    <!-- strings regarding water sources here -->
+    <string name="water_sources" translatable="false">Water Sources</string>
+    <string name="water_source_data" translatable="false">Water Source Data</string>
+
+    <string-array name="water_sources_array"></string-array>
+
+    <string name="water_source_name" translatable="false">Water Source Name</string>
+    <string name="water_source_location" translatable="false">Water Source Location</string>
+
+    <!-- strings regarding expenditures here -->
+    <string name="expenditures" translatable="false">Expenditures</string>
+    <string name="expenditure" translatable="false">Expenditure</string>
+    <string name="repair_type" translatable="false">Expenditure Type</string>
+    <string name="expenditure_cost" translatable="false">Expenditure cost</string>
+    <string name="benefactor" translatable="false">Person paid</string>
+    <string name="description" translatable="false">Describe your expenditure</string>
+    <string name="added_by" translatable="false">Added By</string>
+    <string name="date_added" translatable="false">Date Added</string>
+    <string name="save_expenditure" translatable="false">Save expenditure</string>
+
+    <string-array name="repairtypes_array"></string-array>
+
+    <string name="repairtype_prompt" translatable="false">Choose Repair Type</string>
+
+    <!-- strings regarding system users here -->
+    <string name="system_users" translatable="false">Users</string>
+
+    <!-- strings regarding user account here -->
+    <string name="account" translatable="false">Account</string>
+    <string name="my_account_balance" translatable="false">My Balance</string>
+    <string name="balance" translatable="false">Balance</string>
+    <string name="account_name" translatable="false">Account name</string>
+    <string name="available_balance" translatable="false">Available Balance</string>
+    <string name="mini_statement" translatable="false">Mini Statement</string>
+    <string name="transaction" translatable="false">Transaction</string>
+    <string name="verified_transactions" translatable="false">Verified Transactions</string>
+    <string name="cost" translatable="false">Cost</string>
+    <string name="type_of_expense" translatable="false">Type of expense</string>
+    <string name="save_expense" translatable="false">Save expense</string>
+    <string name="add_expense" translatable="false">Add expense</string>
+    <string name="view_expenses" translatable="false">View expenses</string>
+    <string name="expense_cost" translatable="false">Expense Cost</string>
+    <string name="compose_sms" translatable="false">Compose SMS</string>
+    <string name="type_the_message" translatable="false">Type the message</string>
+    <string name="senders_name" translatable="false">Your name</string>
+    <string name="recepients_name" translatable="false">To</string>
+    <string name="report" translatable="false">Report</string>
+    <string name="send_sms_message" translatable="false">Send Message</string>
+
+    <string name="choose_language" translatable="false">Choose Language | Komamu orulimi rwokwetaga</string>
+    <string name="invalid_date" translatable="false">Invalid Date</string>
+    <string name="invalid_date_prompt" translatable="false">Your phone date is inaccurate! Adjust your clock and try again.</string>
+    <string name="invalid_date_desc" translatable="false">Your phone date and time is:</string>
+    <string name="adjust_date" translatable="false">Adjust date</string>
+
+
+</resources>

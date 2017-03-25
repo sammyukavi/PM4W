@@ -1,0 +1,15 @@
+Options +FollowSymLinks -MultiViews -Indexes
+<IfModule mod_rewrite.c>
+#   RewriteEngine on
+#   RewriteRule    ^$    MAIN_SITE/    [L]   
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^192.168.56.1$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^192.168.56.1$ 
+RewriteCond %{REQUEST_URI} !MAIN_SITE/
+RewriteRule (.*) /MAIN_SITE/$1 [L]
+</IfModule>
+
+<IfModule mod_php5.c>
+   php_value upload_max_filesize 64M
+   php_value post_max_size 64M
+</IfModule>

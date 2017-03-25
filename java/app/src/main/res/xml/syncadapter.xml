@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sync-adapter xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accountType="com.eyeeza.apps.pm4w"
+    android:contentAuthority="com.eyeeza.apps.pm4w"
+    android:supportsUploading="false"
+    android:userVisible="true" />

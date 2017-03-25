@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="about_description">
-        The PM4W project aims to improve water and sanitation in rural parts of Uganda by enabling access to information by various stakeholders and players in the Water and Sanitation sector.\n
-        Using mobile phones baseline and inspection information is collected about each water point using the Ministry of Water and Environment guidelines and standards.\n
-        For help or more information about this project, please visit our website at http://pm4w.uct.ac.za/
-    </string>
-    <string name="help_description">For information on how to use this application, please visit our website at http://pm4w.uct.ac.za/help.php or contact your local area administrator</string>
-</resources>

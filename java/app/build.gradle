@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'Sammy N Ukavi Jr'
+            keyPassword 'PcTf4C_2Ffj6'
+            storeFile file('D:/Cloud Hosting/Dropbox/App signing tools/Android Studio/android-studio-march-2016.jks')
+            storePassword 'Q#T&PfD2Z*z5'
+        }
+    }
+    compileSdkVersion 8
+    buildToolsVersion '21.1.2'
+    defaultConfig {
+        applicationId "com.eyeeza.apps.pm4w"
+        minSdkVersion 8
+        targetSdkVersion 8
+        versionCode 1
+        versionName "1.1063"
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+            signingConfig signingConfigs.config
+        }
+        debug {
+            debuggable true
+            jniDebuggable true
+            renderscriptDebuggable true
+            minifyEnabled false
+            zipAlignEnabled false
+        }
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_7
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:23.1.1'
+}

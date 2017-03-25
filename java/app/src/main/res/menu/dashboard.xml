@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_sync"
+        android:icon="@drawable/menu_sync"
+        android:title="@string/send_data" />
+
+    <item
+        android:id="@+id/action_change_language"
+        android:icon="@drawable/menu_choose_language"
+        android:title="@string/choose_language" />
+
+    <item
+        android:id="@+id/action_check_update"
+        android:icon="@drawable/menu_check_update"
+        android:title="@string/check_for_updates" />
+
+    <item
+        android:id="@+id/action_logout"
+        android:icon="@drawable/menu_logout"
+        android:title="@string/logout" />
+
+    <item
+        android:id="@+id/action_about"
+        android:icon="@drawable/menu_about"
+        android:title="@string/about" />
+    <item
+        android:id="@+id/action_help"
+        android:icon="@drawable/menu_help"
+        android:title="@string/help" />
+</menu>

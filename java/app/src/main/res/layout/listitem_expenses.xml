@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dip">
+
+    <TextView
+        android:id="@+id/expenditureIdRenderer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/expenditures"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/expenditureDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/expenditure_cost" />
+
+    <TextView
+        android:id="@+id/benefactor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/repair_type" />
+
+    <TextView
+        android:id="@+id/expenditureCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/expenditure_cost" />
+
+</LinearLayout>

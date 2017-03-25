@@ -1,4 +1,0 @@
-http://pm4w.uct.ac.za/
-http://pm4w.uct.ac.za/downloads/
-http://pm4w.uct.ac.za/manage/
-http://pm4w.uct.ac.za/manage/?a=forgot-password
