@@ -1,0 +1,3 @@
+<?php
+
+$App->setPageTitle("Downloads");
